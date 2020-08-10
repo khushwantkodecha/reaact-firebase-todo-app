@@ -1,30 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import { TextField, Button } from "@material-ui/core";
 import "./InputForm.css";
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
 
-function InputForm() {
-  const [input, setInput] = useState("");
-
+function InputForm({ setInput, input, addTodo }) {
   console.log(input);
   return (
     <div className="input__form">
-      {/* <input type="text" /> */}
       <TextField
         id="standard-basic"
-        label="Add ToDo Here..."
         variant="outlined"
         size="small"
+        label="Type next todo"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <Fab color="primary" aria-label="add">
-        <AddIcon />
-      </Fab>
-      {/* <Button variant="contained" color="primary">
+      <Button
+        className="inputform__button"
+        variant="contained"
+        color="primary"
+        onClick={addTodo}
+      >
         Add Todo
-      </Button> */}
+      </Button>
     </div>
   );
 }

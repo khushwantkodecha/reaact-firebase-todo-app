@@ -1,0 +1,45 @@
+.todolist__card {
+  min-width: 310px !important;
+  width: 70%;
+  margin-top: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.todolist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.icon {
+  cursor: pointer;
+  padding: 0.3em;
+}
+
+.card__content {
+  width: 64%;
+  text-align: left;
+}
+
+.icons:first-child {
+  margin-right: 0.1em;
+}
+
+@media screen and (min-width: 900px) {
+  .icons {
+    display: none;
+  }
+
+  .todolist__card:hover > .icons {
+    display: inline;
+  }
+  .card__content {
+    width: 80%;
+    /* float: left; */
+    text-align: left;
+  }
+}
